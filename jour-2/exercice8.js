@@ -1,9 +1,9 @@
-var limit = 5
-var score = 6
-var password = "ghriozeghr"
-if ( password.length > limit && score > limit ) {
+var limit = 50
+var score = 64
+var password = "azerty"
+if ( password.length > 5 && score >= limit ) {
     console.log("Everything is good")
-} else if ( password.length > limit || score > limit ) {
+} else if ( password.length > 5 || score >= limit ) {
     console.log("Something is good")
 } else {
     console.log("Nothing is good")
