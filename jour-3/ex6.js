@@ -1,6 +1,6 @@
 var sentence = "Hello Konexio !"
-var reversesentence = ""
+var reverse = ""
 for (var i = sentence.length - 1; i >= 0; i--) {
-    reversesentence = reversesentence += sentence[i];
-    console.log(reversesentence)
+    reverse = reverse += sentence[i];
+    console.log(reverse)
 }
