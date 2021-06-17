@@ -69,18 +69,11 @@ console.log(total)
 
 //exercice 6
 
-function format(num){
-    var h = Math.floor(num / 3600);
-    var m = Math.floor(num % 3600 / 60);
-    var s = Math.floor(num % 3600 % 60);
 
-    var hours = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-    var minutes = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-    var seconds = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return hours + minutes + seconds; 
+function format (num){
+    var hours   = Math.floor(num / 3600)
+    var minutes = Math.floor(num % 3600 / 60);
+    var seconds = Math.floor(num % 3600 % 60)
+ return ('0' + hours)+ ":" + ('0' + minutes)+ ":" +('0' + seconds).slice(-2)
 }
-
-format(3700)
-time = hours + ";" + minutes + ";" + seconds
-console.log(time)
-
+console.log(format(3700))
