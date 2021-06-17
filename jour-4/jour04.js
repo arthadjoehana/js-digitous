@@ -74,6 +74,27 @@ function format (num){
     var hours   = Math.floor(num / 3600)
     var minutes = Math.floor(num % 3600 / 60);
     var seconds = Math.floor(num % 3600 % 60)
- return ('0' + hours)+ ":" + ('0' + minutes)+ ":" +('0' + seconds).slice(-2)
+    if (hours < 10) {
+        hours = "0" + hours
+    }
+    if (minutes < 10 ) {
+        minutes = "0" + minutes
+    }
+ return (hours)+ ":" + (minutes)+ ":" +('0' + seconds).slice(-2)
 }
 console.log(format(3700))
+
+//bonus 1
+
+var passwords = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+var result = ""
+function generatePassword(num) {
+    if ( num < 6 || num > 15) {
+        console.log("error")
+    } else {
+    for ( var i = 0; i < num; i++ ) {
+        result += passwords.charAt(Math.floor(Math.random() * passwords.length))
+    }
+    return result.toLocaleUpperCase()}
+}
+console.log(generatePassword(7))
