@@ -80,9 +80,12 @@ function format (num){
     if (minutes < 10 ) {
         minutes = "0" + minutes
     }
- return (hours)+ ":" + (minutes)+ ":" +('0' + seconds).slice(-2)
+    if (seconds < 10 ) {
+        seconds = "0" + seconds
+    }
+ return (hours) + ":" + (minutes) + ":" + (seconds)
 }
-console.log(format(3700))
+console.log(format(3759))
 
 //bonus 1
 
@@ -98,3 +101,35 @@ function generatePassword(num) {
     return result.toLocaleUpperCase()}
 }
 console.log(generatePassword(7))
+
+//bonus 2
+
+var sumOfDice = 0
+var dice = 0
+var result = []
+
+function launchDice(numberOfDice) {
+    for (var i = 0; i <= numberOfDice ; i++ ) {
+        dice = Math.floor(Math.random()*6)+1
+        sumOfDice = sumOfDice + dice    
+    }
+    result.push(sumOfDice)
+    sumOfDice = 0
+}
+
+launchDice(5)
+launchDice(5)
+
+var player1 = result[0]
+var player2 = result[1]
+
+if (player1 > player2) {
+    console.log("player 1 =", player1, ",", "player 2 =", player2, ",", "player 1 wins")
+} else if (player2 > player1) {
+    console.log("player 1 =", player1, ",", "player 2 =", player2, ",", "player 2 wins")
+} else {
+    console.log("player 1 =", player1, ",", "player 2 =", player2, ",", "draw")
+}
+
+
+
