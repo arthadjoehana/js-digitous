@@ -23,7 +23,6 @@ console.log(nombres)
 
 let dice = 0
 let dice5orAbove = 0
-let result = 0
 let sumOfDice = 0
 
 function launchDice(numberOfDice) {
