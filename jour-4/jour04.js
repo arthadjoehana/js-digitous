@@ -9,7 +9,7 @@ var cat = {
 
 console.log(cat)
 
-if (cat.isCute === true) {
+if (cat.isCute) {
     console.log("So cute !")
 }
 
@@ -85,31 +85,37 @@ function format (num){
     }
  return (hours) + ":" + (minutes) + ":" + (seconds)
 }
-console.log(format(3759))
+console.log(format(3000))
 
 //bonus 1
 
-var passwords = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-var result = ""
+
+
 function generatePassword(num) {
-    if ( num < 6 || num > 15) {
-        console.log("error")
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let password = ""
+    if ( 6 <= num <= 15 ) {
+        for ( let i = 0; i < num; i++ ) {
+            password += characters.charAt(Math.floor(Math.random() * characters.length))
+        
+        } 
     } else {
-    for ( var i = 0; i < num; i++ ) {
-        result += passwords.charAt(Math.floor(Math.random() * passwords.length))
+        console.log("error")
     }
-    return result.toLocaleUpperCase()}
+    return password
 }
-console.log(generatePassword(7))
+console.log(generatePassword(10))
 
 //bonus 2
 
-var sumOfDice = 0
-var dice = 0
-var result = []
+
+let sumOfDice = 0
+let dice = 0
+let result = []
 
 function launchDice(numberOfDice) {
-    for (var i = 0; i <= numberOfDice ; i++ ) {
+    
+    for (let i = 0; i <= numberOfDice ; i++ ) {
         dice = Math.floor(Math.random()*6)+1
         sumOfDice = sumOfDice + dice    
     }
