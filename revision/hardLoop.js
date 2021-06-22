@@ -1,6 +1,6 @@
+/* 
 //ex1
 
-/* 
 let numbers = []
 let limit = 50
 for (let i = 0 ; i < limit ; i++) {
@@ -19,9 +19,9 @@ console.log(sum)
 
 */
 
+/* 
 //ex 2
 
-/* 
 let numbers = []
 let number = 0
 let limit = 50
@@ -45,9 +45,10 @@ for (i = 0 ; i <= highestNumber ; i++){
 console.log(highestNumber)
 */
 
-//ex3
+
 
 /*
+//ex3
 
 let numbers = []
 let number = 0
@@ -75,18 +76,14 @@ while (j < 50) {
         j++
     }
 }
-
 */
 
-//ex4
+
 
 /*
-
-*/
+//ex4
 
 let words = ["hello", "goodbye", "yes", "no", "stop", "go go go"]
-let splitWords = ""
-let strings = ""
 let letters = []
 let numberOfO = 0
 for (let i = 0 ; i < words.length ; i++ ) {
@@ -105,6 +102,5 @@ for (let i = 0 ; i < words.length ; i++ ) {
     }
 }
 console.log(numberOfO)
-
-
+*/
 
