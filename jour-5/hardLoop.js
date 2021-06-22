@@ -85,3 +85,26 @@ while (j < 50) {
 */
 
 let words = ["hello", "goodbye", "yes", "no", "stop", "go go go"]
+let splitWords = ""
+let strings = ""
+let letters = []
+let numberOfO = 0
+for (let i = 0 ; i < words.length ; i++ ) {
+    
+    letters = words[i].split('')
+    console.log(letters)
+    
+    for (let j = 0 ; j < letters.length ; j++) {
+        console.log("nested loop returns", letters[j])
+        if (letters[j] === "o") {
+            console.log("true")
+            numberOfO++
+        } else {
+            console.log("false")
+        }
+    }
+}
+console.log(numberOfO)
+
+
+
