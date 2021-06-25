@@ -1,4 +1,4 @@
-/*
+
 
 //ex1
 
@@ -23,35 +23,25 @@ console.log(sortedString)
 
 //ex2
 
-let array = []
-let letters = []
+
 let numberOfX = 0
 let numberOfO = 0
 
 function countEach(str) {
-    let string = str
-    array.push(string)
-    for (let i = 0 ; i < array.length ; i++ ) {
-        letters = array[i].split("")
-        for (let j = 0 ; j < letters.length ; j++) {
-            if (letters[j] === "o") {
+
+    for (let i = 0 ; i < str.length ; i++ ) {
+        
+            if (str[i] === "o") {
                 numberOfO++
-            } else  if (letters[j] === "x") {
+            } else  if (str[i] === "x") {
                 numberOfX++
             }
             
-        }
     }
-    console.log(numberOfO, numberOfX)
-    if (numberOfO === numberOfX) {
-        console.log ("true")
-    } else {
-        console.log ("false")
-    }
+   return numberOfX === numberOfO
 }
 
-countEach("xxooxoox")
-
+console.log(countEach("xxooxoox"))
 
 
 //ex3

@@ -80,7 +80,7 @@ while (j < 50) {
 
 
 
-/*
+
 //ex4
 
 let words = ["hello", "goodbye", "yes", "no", "stop", "go go go"]
@@ -88,7 +88,7 @@ let letters = []
 let numberOfO = 0
 for (let i = 0 ; i < words.length ; i++ ) {
     
-    letters = words[i].split('')
+    letters = words[i]
     console.log(letters)
     
     for (let j = 0 ; j < letters.length ; j++) {
@@ -102,5 +102,5 @@ for (let i = 0 ; i < words.length ; i++ ) {
     }
 }
 console.log(numberOfO)
-*/
+
 
